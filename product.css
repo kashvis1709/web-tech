@@ -1,0 +1,265 @@
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #1a1a1a;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #4a6fa5; 
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #385992; 
+}
+
+.hover-grow:hover {
+    transform: scale(1.05); 
+}
+
+
+.navbar {
+    background-color: #fff;
+    color: #1a1a1a;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #4a6fa5;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+.navbar li {
+    margin-left: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #4a6fa5;
+}
+
+.banner {
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSMsGnBO6GANHWr8KTrZgA6Z0sEoB5s52kXQ&s") center/cover no-repeat;
+    height: 60vh; 
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+}
+
+.banner h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.banner p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+
+.features-section, .pricing-section {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-box {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.feature-box .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    display: block;
+    color: #4a6fa5;
+}
+
+
+.pricing-section {
+    background-color: #e9e9ee;
+}
+
+.pricing-container {
+    display: flex; 
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.pricing-card {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    flex: 1; 
+    max-width: 300px;
+    
+    
+    border: 2px solid #ddd;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); 
+}
+
+.highlighted {
+    border-color: #4a6fa5; 
+    box-shadow: 0 15px 30px rgba(74, 111, 165, 0.2); 
+}
+
+.pricing-card h3 {
+    font-size: 24px;
+    margin-top: 0;
+    color: #4a6fa5;
+}
+
+.pricing-card .price {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 10px 0 20px 0;
+    color: #1a1a1a;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.pricing-card li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.pricing-card li:last-child {
+    border-bottom: none;
+}
+
+
+
+.footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px 50px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #a0c3ff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    
+    
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .banner h1 {
+        font-size: 36px;
+    }
+
+    .features-section, .pricing-section {
+        padding: 40px 20px;
+    }
+
+    .features-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .pricing-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .pricing-card {
+        max-width: 90%; 
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+    }
+}
